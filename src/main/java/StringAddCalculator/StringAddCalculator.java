@@ -11,9 +11,10 @@ public class StringAddCalculator {
         if (numbers.isEmpty()) {
             return 0;
         }
-        if (numbers.isSizeOne()) {
-            return numbers.getValues().get(0);
-        }
-        return 227;
+        return this.numbers
+                .getValues()
+                .stream()
+                .reduce(Integer::sum)
+                .get();
     }
 }

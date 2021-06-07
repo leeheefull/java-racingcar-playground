@@ -11,10 +11,9 @@ public class CalculatorNo {
         if (isEmpty(input)) {
             return;
         }
-
         String[] values = input.split("[,:]");
-        if (isSizeOne(values)) {
-            this.values.add(Integer.parseInt(values[0]));
+        for (String value : values) {
+            this.values.add(Integer.parseInt(value));
         }
     }
 
@@ -28,13 +27,5 @@ public class CalculatorNo {
 
     public boolean isEmpty() {
         return this.values.isEmpty();
-    }
-
-    private boolean isSizeOne(String[] values) {
-        return values.length == 1;
-    }
-
-    public boolean isSizeOne() {
-        return this.values.size() == 1;
     }
 }
