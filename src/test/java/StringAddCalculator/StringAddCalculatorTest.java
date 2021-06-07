@@ -42,4 +42,10 @@ public class StringAddCalculatorTest {
     void calculate_success(String input, int expected) {
         assertThat(new StringAddCalculator(input).calculate()).isEqualTo(expected);
     }
+
+    @Test
+    @DisplayName("새로운 구분자를 추가하여 계산")
+    void calculate_new_separator_success() {
+        assertThat(new StringAddCalculator("//;\n1;2,3:4,5;6").calculate()).isEqualTo(21);
+    }
 }
