@@ -17,6 +17,7 @@
 - [X] 숫자 하나를 입력할 경우 해당 숫자를 그대로 반환한다.
 - [X] 숫자 사이를 (, 또는 :)로 구분할 경우 두 수의 합을 반환한다.
 - [X] "//"와 "\n"사이에 커스텀 구분자를 지정할 수 있다.
-- [ ] 숫자 이외의 값은 RuntimeException을 Throw한다.
+- [X] 숫자 이외의 값은 RuntimeException을 Throw한다.
+- [X] 지정되지 않은 구분자를 입력할 경우 RuntimeException을 Throw한다.
 
 ---

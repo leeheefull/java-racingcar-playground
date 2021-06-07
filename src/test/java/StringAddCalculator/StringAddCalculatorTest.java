@@ -6,9 +6,8 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
-import java.util.Arrays;
-
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 
 public class StringAddCalculatorTest {
 
@@ -45,7 +44,23 @@ public class StringAddCalculatorTest {
 
     @Test
     @DisplayName("새로운 구분자를 추가하여 계산")
-    void calculate_new_separator_success() {
+    void calculate_new_separator() {
         assertThat(new StringAddCalculator("//;\n1;2,3:4,5;6").calculate()).isEqualTo(21);
+    }
+
+    @Test
+    @DisplayName("숫자와 구분자 이외의 값을 입력할 경우")
+    void input_string_exception() {
+        assertThatThrownBy(() -> {
+            new CalculatorNo("p,4");
+        }).isInstanceOf(InputNotNumberException.class);
+    }
+
+    @Test
+    @DisplayName("지정되지 않은 구분자를 입력할 경우")
+    void input_unknown_separator() {
+        assertThatThrownBy(() -> {
+            new CalculatorNo("3;4");
+        }).isInstanceOf(UnknownSeparatorException.class);
     }
 }

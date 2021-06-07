@@ -23,6 +23,7 @@ public class CalculatorNo {
 
         String[] values = input.split(regex);
         for (String value : values) {
+            validate(value);
             this.values.add(Integer.parseInt(value));
         }
     }
@@ -31,8 +32,25 @@ public class CalculatorNo {
         return values;
     }
 
+    private void validate(String value) {
+        if (!isNumber(value)) {
+            throw new InputNotNumberException();
+        }
+        if (!isKnownSeparator(value)) {
+            throw new UnknownSeparatorException();
+        }
+    }
+
+    private boolean isNumber(String value) {
+        return '0' <= value.charAt(0) && value.charAt(0) <= '9';
+    }
+
     private boolean isEmpty(String input) {
         return input == null || input.equals("");
+    }
+
+    private boolean isKnownSeparator(String value) {
+        return value.length() == 1;
     }
 
     public boolean isEmpty() {
