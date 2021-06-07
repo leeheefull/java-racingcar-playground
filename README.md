@@ -20,4 +20,8 @@
 - [X] 숫자 이외의 값은 RuntimeException을 Throw한다.
 - [X] 지정되지 않은 구분자를 입력할 경우 RuntimeException을 Throw한다.
 
+### 다이어그램
+
+![image](https://user-images.githubusercontent.com/58816862/121039134-cb7ad980-c7eb-11eb-8d09-10a9d45c7952.png)
+
 ---

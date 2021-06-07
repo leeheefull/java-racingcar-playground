@@ -1,4 +1,4 @@
-package StringAddCalculator;
+package StringAddCalculator.exception;
 
 public class InputNotNumberException extends RuntimeException {
     @Override

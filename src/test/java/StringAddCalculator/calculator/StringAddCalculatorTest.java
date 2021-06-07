@@ -1,5 +1,6 @@
-package StringAddCalculator;
+package StringAddCalculator.calculator;
 
+import StringAddCalculator.exception.InputNotNumberException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -51,16 +52,12 @@ public class StringAddCalculatorTest {
     @Test
     @DisplayName("숫자와 구분자 이외의 값을 입력할 경우")
     void input_string_exception() {
-        assertThatThrownBy(() -> {
-            new CalculatorNo("p,4");
-        }).isInstanceOf(InputNotNumberException.class);
+        assertThatThrownBy(() -> new StringAddCalculator("-2,4")).isInstanceOf(InputNotNumberException.class);
     }
 
     @Test
     @DisplayName("지정되지 않은 구분자를 입력할 경우")
     void input_unknown_separator() {
-        assertThatThrownBy(() -> {
-            new CalculatorNo("3;4");
-        }).isInstanceOf(UnknownSeparatorException.class);
+        assertThatThrownBy(() -> new StringAddCalculator("2;3")).isInstanceOf(NumberFormatException.class);
     }
 }
