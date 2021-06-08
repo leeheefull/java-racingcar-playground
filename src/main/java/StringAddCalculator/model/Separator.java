@@ -1,6 +1,7 @@
 package StringAddCalculator.model;
 
 import StringAddCalculator.exception.InputNotSeparatorException;
+import StringAddCalculator.utils.Constants;
 
 public class Separator {
     private final String separator;
@@ -21,6 +22,6 @@ public class Separator {
     }
 
     private boolean isSeparator(String separator) {
-        return separator.charAt(0) < '1' || '9' < separator.charAt(0);
+        return separator.matches(Constants.NO_SEPARATOR_REGEX);
     }
 }

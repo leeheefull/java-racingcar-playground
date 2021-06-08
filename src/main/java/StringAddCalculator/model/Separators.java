@@ -13,7 +13,7 @@ public class Separators {
         this.separators.add(new Separator(":"));
     }
 
-    public String getStringSeparators() {
+    public String getRegex() {
         return this.separators
                 .stream()
                 .map(Separator::getSeparator)
