@@ -22,6 +22,6 @@
 
 ### 다이어그램
 
-![image](https://user-images.githubusercontent.com/58816862/121039134-cb7ad980-c7eb-11eb-8d09-10a9d45c7952.png)
+![image](https://user-images.githubusercontent.com/58816862/121184286-e60e8a80-c89f-11eb-8e82-12562d4f24b5.png)
 
 ---
