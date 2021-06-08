@@ -1,6 +1,7 @@
 package StringAddCalculator.calculator;
 
 import StringAddCalculator.exception.InputNotNumberException;
+import StringAddCalculator.exception.InputNotSeparatorException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -36,7 +37,8 @@ public class StringAddCalculatorTest {
             "1,2=3",
             "3:4=7",
             "5,6:7=18",
-            "1,2,3:4:5:6=21"
+            "1,2,3:4:5:6=21",
+            "1,24,1=26"
     }, delimiter = '=')
     @DisplayName("(, 또는 :)로 구분하여 숫자들의 합 계산")
     void calculate_success(String input, int expected) {
@@ -59,5 +61,11 @@ public class StringAddCalculatorTest {
     @DisplayName("지정되지 않은 구분자를 입력할 경우")
     void input_unknown_separator() {
         assertThatThrownBy(() -> new StringAddCalculator("2;3")).isInstanceOf(NumberFormatException.class);
+    }
+
+    @Test
+    @DisplayName("숫자를 구분자로 넣을 경우")
+    void input_number_separator() {
+        assertThatThrownBy(() -> new StringAddCalculator("//9\n19293").calculate()).isInstanceOf(InputNotSeparatorException.class);
     }
 }
