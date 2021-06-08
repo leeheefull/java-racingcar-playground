@@ -1,17 +1,13 @@
 package StringAddCalculator.model;
 
 public class Separator {
-    private String separator;
+    private final String separator;
 
-    public Separator() {
-        this.separator = "[,:]";
+    public Separator(String separator) {
+        this.separator = separator;
     }
 
     public String getSeparator() {
         return separator;
-    }
-
-    public void add(String separator) {
-        this.separator += "|" + separator;
     }
 }
