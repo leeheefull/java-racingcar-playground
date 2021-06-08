@@ -17,14 +17,14 @@ public class StringAddCalculator {
             return;
         }
         input = findNewSeparator(input);
-
-        for (String value : input.split(separators.getStringSeparators())) {
+        String regex = this.separators.getStringSeparators();
+        for (String value : input.split(regex)) {
             this.numbers.addStringNumber(value);
         }
     }
 
     public int calculate() {
-        if (numbers.isEmpty()) {
+        if (this.numbers.getNumbers().isEmpty()) {
             return 0;
         }
         return this.numbers
@@ -42,7 +42,7 @@ public class StringAddCalculator {
     private String findNewSeparator(String input) {
         Matcher matcher = Pattern.compile(Constants.NEW_SEPARATOR).matcher(input);
         if (matcher.find()) {
-            separators.addStringSeparator(matcher.group(Constants.BEFORE));
+            this.separators.addStringSeparator(matcher.group(Constants.BEFORE));
             input = matcher.group(Constants.AFTER);
         }
         return input;

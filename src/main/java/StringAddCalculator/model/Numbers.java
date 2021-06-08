@@ -17,8 +17,4 @@ public class Numbers {
     public void addStringNumber(String number) {
         this.numbers.add(new Number(Integer.parseInt(number)));
     }
-
-    public boolean isEmpty() {
-        return this.numbers.isEmpty();
-    }
 }
