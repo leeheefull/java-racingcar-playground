@@ -27,4 +27,11 @@ public class RacingGameTest {
     void input_alone_return_winner() {
         assertThat(new RacingGame("chan").play()).isEqualTo("chan");
     }
+
+    @Test
+    @DisplayName("자동차 이름을 (,)로 구분하여 저장")
+    void car_name_save() {
+        RacingGame racingGame = new RacingGame("chan,bin,dong,bang,eun");
+        assertThat(racingGame.getCars().getFirstName()).isEqualTo("chan");
+    }
 }

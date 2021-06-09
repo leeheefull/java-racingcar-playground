@@ -44,7 +44,7 @@
 - [X] null 값을 입력하면 NullPointerException을 Throw한다.
 - [X] 아무것도 입력하지 않으면 RuntimeException을 Throw한다.
 - [X] 혼자 참가하게 되면 자동 우승이 된다.
-- [ ] 자동차 이름 (,)로 구분하여 저장한다.
+- [X] 자동차 이름 (,)로 구분하여 저장한다.
 - [ ] 자동차 이름이 5자가 초과되면 RuntimeException을 Throw한다.
 - [ ] 전진 시도 횟수가 0일 경우 RuntimeException을 Throw한다.
 - [ ] 한 턴에 각 자동차가 전진하는지는 랜덤으로 결정된다.

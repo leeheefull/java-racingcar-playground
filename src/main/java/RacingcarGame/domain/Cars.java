@@ -6,16 +6,21 @@ import java.util.List;
 public class Cars {
     private final List<Car> cars;
 
-    public Cars(String input) {
+    public Cars(String[] values) {
         this.cars = new ArrayList<>();
-        cars.add(new Car(input));
-    }
-
-    public List<Car> getCars() {
-        return cars;
+        for (String car : values) {
+            cars.add(new Car(car));
+        }
     }
 
     public boolean isAlone() {
         return this.cars.size() == 1;
+    }
+
+    public String getFirstName() {
+        return cars.stream()
+                .findFirst()
+                .map(Car::getName)
+                .get();
     }
 }
