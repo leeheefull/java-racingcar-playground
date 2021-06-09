@@ -41,7 +41,8 @@
 
 ### 기능 목록
 
-- [ ] 아무것도 입력하지 않으면 RuntimeException을 Throw한다.
+- [X] null 값을 입력하면 NullPointerException을 Throw한다.
+- [X] 아무것도 입력하지 않으면 RuntimeException을 Throw한다.
 - [ ] 혼자 참가하게 되면 자동 우승이 된다.
 - [ ] 자동차 이름 (,)로 구분하여 부여한다.
 - [ ] 자동차 이름이 5자가 초과되면 RuntimeException을 Throw한다.
