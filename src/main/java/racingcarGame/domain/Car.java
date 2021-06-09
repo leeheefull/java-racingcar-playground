@@ -5,12 +5,10 @@ import racingcarGame.utils.Constants;
 
 public class Car {
     private final String name;
-    private final int position;
+    private int position;
 
     public Car(String name) {
-        validate(name);
-        this.name = name;
-        this.position = 0;
+        this(name, 0);
     }
 
     public Car(String input, int position) {
@@ -27,8 +25,8 @@ public class Car {
         return position;
     }
 
-    public Car move() {
-        return new Car(this.name, this.position + 1);
+    public void move() {
+        this.position++;
     }
 
     private void validate(String input) {

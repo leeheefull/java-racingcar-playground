@@ -1,14 +1,11 @@
 package racingcarGame;
 
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import racingcarGame.domain.RacingGame;
 import racingcarGame.exception.GameCancelFlagException;
 import racingcarGame.exception.InputEmptyException;
 import racingcarGame.exception.InputNullException;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-
-import java.util.Arrays;
-import java.util.Collections;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
@@ -31,15 +28,15 @@ public class RacingGameTest {
     @Test
     @DisplayName("혼자 참가하면 자동 우승")
     void input_alone_return_winner() {
-        assertThat(new RacingGame("chan", 5).play())
-                .isEqualTo(Collections.singletonList("chan"));
+        assertThat(new RacingGame("chan", 5).getWinCars().get(0).getName())
+                .isEqualTo("chan");
     }
 
     @Test
     @DisplayName("자동차 이름을 (,)로 구분하여 저장")
     void car_name_save() {
-        assertThat(new RacingGame("chan,bin,dong,bang,eun", 5).getCars().getFirstName())
-                .isEqualTo(Collections.singletonList("chan"));
+        assertThat(new RacingGame("chan,bin,dong,bang,eun", 5).getCars().get(0).getName())
+                .isEqualTo("chan");
     }
 
     @Test
@@ -47,12 +44,5 @@ public class RacingGameTest {
     void move_number_0() {
         assertThatThrownBy(() -> new RacingGame("chan,bin,dong,bang,eun", 0))
                 .isInstanceOf(GameCancelFlagException.class);
-    }
-
-    @Test
-    @DisplayName("제일 앞서나간 자동차가 우승자")
-    void game_winner() {
-        assertThat(new RacingGame("chan,bin,dong,bang,eun", 5).play())
-                .isEqualTo(Arrays.asList("chan", "bin", "dong", "bang", "eun"));
     }
 }
