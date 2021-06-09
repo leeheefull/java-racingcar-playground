@@ -1,7 +1,5 @@
-package StringAddCalculator.calculator;
+package StringAddCalculator.model;
 
-import StringAddCalculator.model.Numbers;
-import StringAddCalculator.model.Separators;
 import StringAddCalculator.utils.Constants;
 
 import java.util.regex.Matcher;
