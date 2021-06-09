@@ -1,7 +1,7 @@
-package StringAddCalculator.model;
+package stringAddCalculator.domain;
 
-import StringAddCalculator.exception.InputNotSeparatorException;
-import StringAddCalculator.utils.Constants;
+import stringAddCalculator.exception.InputNotSeparatorException;
+import stringAddCalculator.utils.Constants;
 
 public class Separator {
     private final String separator;

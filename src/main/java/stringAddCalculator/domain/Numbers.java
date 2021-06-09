@@ -1,4 +1,4 @@
-package StringAddCalculator.model;
+package stringAddCalculator.domain;
 
 import java.util.ArrayList;
 import java.util.Arrays;

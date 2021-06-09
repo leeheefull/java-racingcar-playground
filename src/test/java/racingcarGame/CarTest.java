@@ -1,7 +1,7 @@
-package racingcar;
+package racingcarGame;
 
-import RacingcarGame.domain.Car;
-import RacingcarGame.exception.CarNameOverflowException;
+import racingcarGame.domain.Car;
+import racingcarGame.exception.CarNameOverflowException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

@@ -1,8 +1,8 @@
-package racingcar;
+package racingcarGame;
 
-import RacingcarGame.domain.RacingGame;
-import RacingcarGame.exception.InputEmptyException;
-import RacingcarGame.exception.InputNullException;
+import racingcarGame.domain.RacingGame;
+import racingcarGame.exception.InputEmptyException;
+import racingcarGame.exception.InputNullException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

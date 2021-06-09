@@ -1,4 +1,4 @@
-package StringAddCalculator.exception;
+package stringAddCalculator.exception;
 
 public class InputNotSeparatorException extends RuntimeException {
     @Override

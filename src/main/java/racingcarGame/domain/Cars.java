@@ -1,4 +1,4 @@
-package RacingcarGame.domain;
+package racingcarGame.domain;
 
 import java.util.ArrayList;
 import java.util.List;

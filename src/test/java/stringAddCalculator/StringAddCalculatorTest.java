@@ -1,8 +1,8 @@
-package StringAddCalculator.module;
+package stringAddCalculator;
 
-import StringAddCalculator.exception.InputNotNumberException;
-import StringAddCalculator.exception.InputNotSeparatorException;
-import StringAddCalculator.model.StringAddCalculator;
+import stringAddCalculator.exception.InputNotNumberException;
+import stringAddCalculator.exception.InputNotSeparatorException;
+import stringAddCalculator.domain.StringAddCalculator;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;

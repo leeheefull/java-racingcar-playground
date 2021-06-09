@@ -1,8 +1,8 @@
-package RacingcarGame.domain;
+package racingcarGame.domain;
 
-import RacingcarGame.exception.InputEmptyException;
-import RacingcarGame.exception.InputNullException;
-import RacingcarGame.utils.Constants;
+import racingcarGame.exception.InputEmptyException;
+import racingcarGame.exception.InputNullException;
+import racingcarGame.utils.Constants;
 
 public class RacingGame {
     private final Cars cars;

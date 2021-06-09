@@ -1,6 +1,6 @@
-package StringAddCalculator.model;
+package stringAddCalculator.domain;
 
-import StringAddCalculator.utils.Constants;
+import stringAddCalculator.utils.Constants;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

@@ -1,7 +1,7 @@
-package RacingcarGame.domain;
+package racingcarGame.domain;
 
-import RacingcarGame.exception.CarNameOverflowException;
-import RacingcarGame.utils.Constants;
+import racingcarGame.exception.CarNameOverflowException;
+import racingcarGame.utils.Constants;
 
 public class Car {
     private final String name;

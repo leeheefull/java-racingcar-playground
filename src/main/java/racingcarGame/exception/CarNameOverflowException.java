@@ -1,4 +1,4 @@
-package RacingcarGame.exception;
+package racingcarGame.exception;
 
 public class CarNameOverflowException extends RuntimeException {
     @Override

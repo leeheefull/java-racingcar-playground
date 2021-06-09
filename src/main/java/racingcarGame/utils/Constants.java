@@ -1,4 +1,4 @@
-package RacingcarGame.utils;
+package racingcarGame.utils;
 
 public class Constants {
     public static final String SEPARATOR = ",";

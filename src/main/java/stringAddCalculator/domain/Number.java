@@ -1,7 +1,7 @@
-package StringAddCalculator.model;
+package stringAddCalculator.domain;
 
-import StringAddCalculator.exception.InputNotNumberException;
-import StringAddCalculator.utils.Constants;
+import stringAddCalculator.exception.InputNotNumberException;
+import stringAddCalculator.utils.Constants;
 
 public class Number {
     private final int number;

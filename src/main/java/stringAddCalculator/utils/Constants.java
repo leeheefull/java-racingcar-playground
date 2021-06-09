@@ -1,4 +1,4 @@
-package StringAddCalculator.utils;
+package stringAddCalculator.utils;
 
 public class Constants {
     public static final String NEW_SEPARATOR = "//(.)\n(.*)";
