@@ -5,6 +5,8 @@ import racingcarGame.exception.InputEmptyException;
 import racingcarGame.exception.InputNullException;
 import racingcarGame.utils.Constants;
 
+import java.util.List;
+
 public class RacingGame {
     private final Cars cars;
     private final int moveCnt;
@@ -19,11 +21,11 @@ public class RacingGame {
         return cars;
     }
 
-    public String play() {
-        if (cars.isAlone()) {
-            return cars.getFirstName();
+    public List<String> play() {
+        if (this.cars.isAlone()) {
+            return this.cars.getFirstName();
         }
-        return null;
+        return this.cars.getWinnersName();
     }
 
     private String[] splitInput(String input) {
