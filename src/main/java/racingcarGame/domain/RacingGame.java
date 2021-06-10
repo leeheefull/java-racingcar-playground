@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
 public class RacingGame {
     private final List<Car> cars;
     private final int moveCnt;
+    private final StringBuilder gameLog;
 
     public RacingGame(String input, int moveCnt) {
         validate(input, moveCnt);
@@ -22,11 +23,16 @@ public class RacingGame {
             this.cars.add(new Car(car));
         }
         this.moveCnt = moveCnt;
+        this.gameLog = new StringBuilder();
         play();
     }
 
     public List<Car> getCars() {
         return cars;
+    }
+
+    public StringBuilder getGameLog() {
+        return gameLog;
     }
 
     public List<Car> getWinCars() {
@@ -61,12 +67,18 @@ public class RacingGame {
     private void play() {
         int cnt = this.moveCnt;
         while (cnt-- > 0) {
-            for (Car car : this.cars) {
-                if (RandomGenerator.moveOrStop()) {
-                    car.move();
-                }
-            }
+            moveOrStopOnce();
         }
+    }
+
+    private void moveOrStopOnce() {
+        for (Car car : this.cars) {
+            if (RandomGenerator.moveOrStop()) {
+                car.move();
+            }
+            gameLog.append(car.getMoveLog());
+        }
+        gameLog.append("\n");
     }
 
     private String[] splitInput(String input) {

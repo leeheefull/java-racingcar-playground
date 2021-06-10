@@ -29,6 +29,15 @@ public class Car {
         this.position++;
     }
 
+    public String getMoveLog() {
+        StringBuilder output = new StringBuilder(getName() + ": ");
+        for (int i = 0; i < this.position; i++) {
+            output.append("-");
+        }
+        output.append("\n");
+        return output.toString();
+    }
+
     private void validate(String input) {
         if (isNameSizeOver(input)) {
             throw new CarNameOverflowException();
