@@ -50,4 +50,8 @@
 - [X] 1등 또는 공동 1등 한 자동차를 반환한다.
 - [X] 한 턴에 각 자동차가 전진하는지는 랜덤으로 결정된다.
 
+### 다이어그램
+
+![image](https://user-images.githubusercontent.com/58816862/121500475-4b39bb80-ca19-11eb-92f4-a0bd9b473cd9.png)
+
 ---
