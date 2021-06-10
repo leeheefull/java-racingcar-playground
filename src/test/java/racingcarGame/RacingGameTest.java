@@ -2,10 +2,14 @@ package racingcarGame;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import racingcarGame.domain.Car;
 import racingcarGame.domain.RacingGame;
 import racingcarGame.exception.GameCancelFlagException;
 import racingcarGame.exception.InputEmptyException;
 import racingcarGame.exception.InputNullException;
+
+import java.util.Arrays;
+import java.util.List;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
@@ -35,8 +39,14 @@ public class RacingGameTest {
     @Test
     @DisplayName("자동차 이름을 (,)로 구분하여 저장")
     void car_name_save() {
-        assertThat(new RacingGame("chan,bin,dong,bang,eun", 5).getCars().get(0).getName())
-                .isEqualTo("chan");
+        // given
+        List<Car> actual = new RacingGame("chan,bin,dong,bang,eun", 5).getCars();
+        List<String> expected = Arrays.asList("chan", "bin", "dong", "bang", "eun");
+
+        // when, then
+        for (int i = 0; i < actual.size(); i++) {
+            assertThat(actual.get(i).getName()).isEqualTo(expected.get(i));
+        }
     }
 
     @Test
