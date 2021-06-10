@@ -2,11 +2,11 @@ package racingcarGame.view;
 
 import java.io.PrintStream;
 
-public class RacingcarGameView {
+public class RacingGameView {
     private final PrintStream out = new PrintStream(System.out);
 
     public void showInputString() {
-        out.print("경주할 자동차 이름을 입력하세요(이름은 쉼표(,)를 기준으로 구분).\n-> ");
+        out.print("참가자 이름을 입력하세요(이름은 쉼표(,)를 기준으로 구분).\n-> ");
     }
 
     public void showInputMoveCnt() {

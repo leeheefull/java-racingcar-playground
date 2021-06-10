@@ -32,7 +32,7 @@ public class RacingGameTest {
     @Test
     @DisplayName("혼자 참가하면 자동 우승")
     void input_alone_return_winner() {
-        assertThat(new RacingGame("chan", 5).getWinCars().get(0).getName())
+        assertThat(new RacingGame("chan", 5).getWinner().get(0).getName())
                 .isEqualTo("chan");
     }
 
