@@ -2,12 +2,12 @@ package racingcarGame.domain;
 
 import racingcarGame.exception.NameOverflowException;
 
-public class Equipment {
-    public final int NAME_MAX_SIZE = 5;
+public class Name {
+    public static final int NAME_MAX_SIZE = 5;
 
     private final String name;
 
-    public Equipment(String name) {
+    public Name(String name) {
         validate(name);
         this.name = name;
     }

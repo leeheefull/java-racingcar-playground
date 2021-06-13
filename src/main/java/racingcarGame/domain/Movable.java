@@ -3,9 +3,7 @@ package racingcarGame.domain;
 public interface Movable {
     int POSITION_INIT = 0;
 
-    String MOVE_MARK = "-";
+    Car move();
 
-    void move();
-
-    String getMoveLog();
+    boolean isMove();
 }

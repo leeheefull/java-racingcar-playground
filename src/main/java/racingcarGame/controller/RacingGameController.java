@@ -18,7 +18,7 @@ public class RacingGameController {
             int moveCnt = getMoveCnt(br);
             RacingGame racingGame = new RacingGame(inputString, moveCnt);
 
-            view.showMessage(racingGame.getLog().toString());
+            view.showMessage(racingGame.play());
             view.showMessage(getResult(racingGame));
         } catch (IOException e) {
             e.printStackTrace();
@@ -36,7 +36,8 @@ public class RacingGameController {
     }
 
     private String getResult(RacingGame racingGame) {
-        return racingGame.getWinner()
+        return racingGame.getCars()
+                .getWinner()
                 .stream()
                 .map(Car::getName)
                 .collect(Collectors.joining(",", "", "이 최종 우승했습니다."));
