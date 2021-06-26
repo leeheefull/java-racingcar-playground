@@ -20,7 +20,7 @@ public class Cars {
 
     public List<Car> getWinner() {
         return this.cars.stream()
-                .filter(car -> car.getPosition() == getMaxPosition())
+                .filter(car -> car.getPosition().getPosition() == getMaxPosition())
                 .collect(Collectors.toList());
     }
 
@@ -49,6 +49,7 @@ public class Cars {
     private int getMaxPosition() {
         return this.cars.stream()
                 .map(Car::getPosition)
+                .map(Position::getPosition)
                 .max(Integer::compare)
                 .get();
     }

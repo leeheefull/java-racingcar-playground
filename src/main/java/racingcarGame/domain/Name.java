@@ -25,4 +25,9 @@ public class Name {
     private boolean isNameSizeOver(String input) {
         return NAME_MAX_SIZE < input.length();
     }
+
+    @Override
+    public String toString() {
+        return name + "";
+    }
 }

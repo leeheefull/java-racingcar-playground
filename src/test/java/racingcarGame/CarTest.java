@@ -18,8 +18,8 @@ public class CarTest {
     @Test
     @DisplayName("잘 저장 되는지")
     void car_name_save() {
-        assertThat(car.getName()).isEqualTo("chan");
-        assertThat(car.getPosition()).isEqualTo(0);
+        assertThat(car.getName().getName()).isEqualTo("chan");
+        assertThat(car.getPosition().getPosition()).isEqualTo(0);
     }
 
     @Test
@@ -29,7 +29,7 @@ public class CarTest {
         Car movedCar = car.move(() -> true);
 
         // then
-        assertThat(movedCar.getPosition()).isEqualTo(1);
+        assertThat(movedCar.getPosition().getPosition()).isEqualTo(1);
     }
 
     @Test
@@ -39,6 +39,6 @@ public class CarTest {
         Car movedCar = car.move(() -> false);
 
         // then
-        assertThat(movedCar.getPosition()).isEqualTo(0);
+        assertThat(movedCar.getPosition().getPosition()).isEqualTo(0);
     }
 }

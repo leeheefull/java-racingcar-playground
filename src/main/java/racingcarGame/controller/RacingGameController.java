@@ -1,6 +1,7 @@
 package racingcarGame.controller;
 
 import racingcarGame.domain.Car;
+import racingcarGame.domain.Name;
 import racingcarGame.domain.RacingGame;
 import racingcarGame.view.RacingGameView;
 
@@ -40,6 +41,7 @@ public class RacingGameController {
                 .getWinner()
                 .stream()
                 .map(Car::getName)
+                .map(Name::getName)
                 .collect(Collectors.joining(",", "", "이 최종 우승했습니다."));
     }
 }

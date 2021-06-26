@@ -13,7 +13,7 @@ public class CarsTest {
     @Test
     @DisplayName("혼자 참가하면 자동 우승")
     void input_alone_return_winner() {
-        assertThat(new Cars("chan").getWinner().get(0).getName())
+        assertThat(new Cars("chan").getWinner().get(0).getName().getName())
                 .isEqualTo("chan");
     }
 
@@ -26,7 +26,7 @@ public class CarsTest {
 
         // when, then
         for (int i = 0; i < actual.getCars().size(); i++) {
-            assertThat(actual.getCars().get(i).getName()).isEqualTo(expected.get(i));
+            assertThat(actual.getCars().get(i).getName().getName()).isEqualTo(expected.get(i));
         }
     }
 }
