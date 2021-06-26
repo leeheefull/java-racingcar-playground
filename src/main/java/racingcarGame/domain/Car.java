@@ -1,13 +1,13 @@
 package racingcarGame.domain;
 
-import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-public class Car extends Name implements Movable {
-    public static final String MOVE_MARK = "-";
-
+public class Car extends Name {
     private final int position;
+
+    public static final String MOVE_MARK = "-";
+    public static final int POSITION_INIT = 0;
 
     public Car(String name) {
         this(name, POSITION_INIT);
@@ -22,14 +22,11 @@ public class Car extends Name implements Movable {
         return this.position;
     }
 
-    @Override
-    public Car move() {
-        return new Car(getName(), this.position + 1);
-    }
-
-    @Override
-    public boolean isMove() {
-        return new Random().nextBoolean();
+    public Car move(MovingStrategy movingStrategy) {
+        if (movingStrategy.movable()) {
+            return new Car(getName(), this.position + 1);
+        }
+        return new Car(getName(), getPosition());
     }
 
     @Override

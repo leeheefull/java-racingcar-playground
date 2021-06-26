@@ -26,8 +26,7 @@ public class Cars {
 
     public void moveOrStop() {
         IntStream.range(0, this.cars.size())
-                .filter(i -> this.cars.get(i).isMove())
-                .forEach(i -> this.cars.set(i, this.cars.get(i).move()));
+                .forEach(i -> this.cars.set(i, this.cars.get(i).move(new RandomMovingStrategy())));
     }
 
     @Override

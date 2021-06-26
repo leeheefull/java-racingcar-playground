@@ -23,12 +23,22 @@ public class CarTest {
     }
 
     @Test
-    @DisplayName("잘 움직이는지")
+    @DisplayName("이동")
     void car_move() {
         //when
-        Car movedCar = car.move();
+        Car movedCar = car.move(() -> true);
 
         // then
         assertThat(movedCar.getPosition()).isEqualTo(1);
+    }
+
+    @Test
+    @DisplayName("정지")
+    void car_stop() {
+        //when
+        Car movedCar = car.move(() -> false);
+
+        // then
+        assertThat(movedCar.getPosition()).isEqualTo(0);
     }
 }
