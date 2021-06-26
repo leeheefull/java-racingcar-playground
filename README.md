@@ -23,7 +23,7 @@
 
 ### 다이어그램
 
-![image](https://user-images.githubusercontent.com/58816862/121224459-8aee8f00-c8c3-11eb-8afe-f015361aaafe.png)
+![image](https://user-images.githubusercontent.com/58816862/123502355-ba084d00-d686-11eb-9ef3-fd2548c0ff16.png)
 
 ---
 
@@ -52,6 +52,6 @@
 
 ### 다이어그램
 
-![image](https://user-images.githubusercontent.com/58816862/121812302-49365d80-cca2-11eb-9b2b-f6dff4251508.png)
+![image](https://user-images.githubusercontent.com/58816862/123502336-9cd37e80-d686-11eb-82d7-502365387688.png)
 
 ---
