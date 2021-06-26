@@ -52,6 +52,6 @@
 
 ### 다이어그램
 
-![image](https://user-images.githubusercontent.com/58816862/123502336-9cd37e80-d686-11eb-82d7-502365387688.png)
+![image](https://user-images.githubusercontent.com/58816862/123511271-5b10fb00-d6bb-11eb-989c-0f47ca983a13.png)
 
 ---
